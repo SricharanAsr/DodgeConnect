@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Here</title>
+    <link rel="icon" type="image/x-icon" href="dodge.svg">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('bg2.jpeg'); 
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            animation: fadeIn 2s ease-in;
+        }
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.441);
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            animation: slideIn 1s ease-out;
+        }
+        .form-container h2 {
+            margin-top: 0;
+            text-align: center;
+            animation: colorChange 2s infinite;
+        }
+        .form-container label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-container input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: border 0.3s;
+        }
+        .form-container input:focus {
+            border-color: #000000;
+        }
+        .form-container button {
+            padding: 10px 15px;
+            background-color: #5e0606;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .form-container button:hover {
+            background-color: #ff0000;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideIn {
+            from { transform: translateY(-100%); }
+            to { transform: translateY(0); }
+        }
+        @keyframes colorChange {
+            0%, 100% { color: #5e0606; }
+            50% { color: #0a1efa; }
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Register</h2>
+        <form id="registrationForm">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="confirmPassword">Confirm Password</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            let name = document.getElementById('name').value;
+            let email = document.getElementById('email').value;
+            let password = document.getElementById('password').value;
+            let confirmPassword = document.getElementById('confirmPassword').value;
+            let dob = document.getElementById('dob').value;
+            let dobYear = new Date(dob).getFullYear();
+
+            if (name.trim() === '') {
+                showAlert('Name cannot be empty');
+                return;
+            }
+
+            if (!validateEmail(email)) {
+                showAlert('Invalid email format');
+                return;
+            }
+
+            if (password.length < 8) {
+                showAlert('Password must be at least 8 characters long');
+                return;
+            }
+
+            if (password !== confirmPassword) {
+                showAlert('Passwords do not match');
+                return;
+            }
+
+            if (dobYear < 1900 || dobYear > 2006) {
+                showAlert('You must be at least 18 years old');
+                return;
+            }
+
+            // Save user data to local storage
+            let users = JSON.parse(localStorage.getItem('users')) || [];
+            users.push({ name: name, email: email, password: password, dob: dob });
+            localStorage.setItem('users', JSON.stringify(users));
+
+            showAlert('Form submitted successfully!', true);
+
+            document.getElementById('registrationForm').reset();
+        });
+
+        function validateEmail(email) {
+            const re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            return re.test(email);
+        }
+
+        function showAlert(message, success = false) {
+            const alertBox = document.createElement('div');
+            alertBox.textContent = message;
+            alertBox.style.position = 'fixed';
+            alertBox.style.top = '20px';
+            alertBox.style.left = '50%';
+            alertBox.style.transform = 'translateX(-50%)';
+            alertBox.style.padding = '10px 20px';
+            alertBox.style.backgroundColor = success ? '#28a745' : '#dc3545';
+            alertBox.style.color = 'white';
+            alertBox.style.borderRadius = '5px';
+            alertBox.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.5)';
+            alertBox.style.opacity = '0';
+            alertBox.style.transition = 'opacity 0.5s';
+            document.body.appendChild(alertBox);
+
+            setTimeout(() => {
+                alertBox.style.opacity = '1';
+            }, 100);
+
+            setTimeout(() => {
+                alertBox.style.opacity = '0';
+                setTimeout(() => {
+                    document.body.removeChild(alertBox);
+                }, 500);
+            }, 3000);
+        }
+    </script>
+</body>
+</html>

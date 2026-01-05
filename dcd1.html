@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dodge Challenger Demon</title>
+    <link rel="icon" href="hellcat logo.png">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #111;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        header {
+            background: linear-gradient(45deg, #ff0000, #800000);
+            padding: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+            animation: fadeIn 2s;
+        }
+
+        header p {
+            margin: 10px 0 0;
+            font-size: 1.5em;
+            animation: fadeIn 3s;
+        }
+
+        section {
+            margin: 20px 0;
+            padding: 20px;
+        }
+
+        #features {
+            background-color: #222;
+            padding: 20px;
+            border-radius: 10px;
+            animation: slideIn 2s;
+        }
+
+        #features ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #features li {
+            margin: 10px 0;
+            font-size: 1.2em;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        #photos {
+            padding: 20px;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .photo-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 30%;
+            animation: zoomIn 1s;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .photo-item img {
+            width: 100%;
+            border: 3px solid #fff;
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .photo-item:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(255,255,255,0.5);
+        }
+
+        .photo-item p {
+            margin-top: 10px;
+            font-size: 1em;
+            animation: fadeIn 1s;
+        }
+
+        #specs {
+            background-color: #222;
+            padding: 20px;
+            border-radius: 10px;
+            animation: slideIn 2s;
+            margin: 20px 0;
+        }
+
+        .specs-table {
+            width: 80%;
+            margin: auto;
+            border-collapse: collapse;
+            animation: fadeIn 2s;
+        }
+
+        .specs-table th, .specs-table td {
+            border: 1px solid #fff;
+            padding: 10px;
+        }
+
+        .specs-table th {
+            background-color: #444;
+        }
+
+        .specs-table tr:nth-child(even) {
+            background-color: #333;
+        }
+
+        #video {
+            margin: 20px 0;
+            padding: 20px;
+        }
+
+        #video video {
+            width: 80%;
+            border: 3px solid #fff;
+            border-radius: 10px;
+            animation: fadeIn 2s;
+        }
+
+        footer {
+            background-color: #333;
+            padding: 10px;
+            font-size: 0.8em;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(0); }
+        }
+
+        @keyframes zoomIn {
+            from { transform: scale(0); }
+            to { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Dodge Challenger Demon</h1>
+        <p>The Beast on the Road</p>
+    </header>
+
+    <section id="features">
+        <h2>Features</h2>
+        <ul>
+            <li>Supercharged 6.2L HEMI V8 engine</li>
+            <li>840 horsepower and 770 lb-ft of torque</li>
+            <li>0-60 mph in 2.3 seconds</li>
+            <li>1/4 mile in 9.65 seconds at 140 mph</li>
+            <li>Widebody package for better handling</li>
+        </ul>
+    </section>
+
+    <section id="photos">
+        <h2>The Dodge Challenger Demon is a high-performance muscle car produced by Dodge, a brand of FCA US LLC. It has gained popularity for its powerful engines, sleek styling, and advanced technology features. The Challenger line was first introduced in the 2008 model year and has since become one of the most iconic muscle car lines on the market. The Dodge Challenger Demon is a recent addition to the series, added for the 2021 model year as a high-performance variant of the Challenger.</h2>
+        <div class="gallery">
+            <div class="photo-item">
+                <img src="img1.webp" alt="Dodge Challenger Demon front view">
+                <p>Front view of the Dodge Challenger Demon.</p>
+            </div>
+            <div class="photo-item">
+                <img src="2018-dodge-challenger-srt-demon.jpg"Dodge Challenger Demon side view">
+                <p>Side view of the Dodge Challenger Demon.</p>
+            </div>
+            <div class="photo-item">
+                <img src="LA_2023_Demon-170_SRT_HellCat_Black-DemonicRed_Laguna_leather_CF.webp" alt="Dodge Challenger Demon interior">
+                <p>Interior view of the Dodge Challenger Demon.</p>
+            </div>
+            <div class="photo-item">
+                <img src="images.jpg" alt="Dodge Challenger Demon rear view">
+                <p>Rear view of the Dodge Challenger Demon.</p>
+            </div>
+            <div class="photo-item">
+                <img src="Dodge-Challenger-Demon-06.jpg" alt="Dodge Challenger Demon engine">
+                <p>Engine view of the Dodge Challenger Demon.</p>
+            </div>
+            <div class="photo-item">
+                <img src="trackd.webp" alt="Dodge Challenger Demon on the track">
+                <p>The Dodge Challenger Demon on the track.</p>
+            </div>
+            <div class="photo-item">
+                <img src="wheel.jpg" alt="Dodge Challenger Demon wheels">
+                <p>Close-up view of the Dodge Challenger Demon's wheels.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="video">
+        <h2>Make no mistake. The limited-production 2023 Dodge Challenger SRT® Demon 170, featuring the first-ever 1,000-plus-horsepower production HEMI® engine, is absolutely here to kick ass and cross names off the competitor lane list. The seventh and final Last Call Special Edition is already banned in its stock form by the NHRA thanks to dominating the quarter-mile with a certified 8.91-seconds ET at 151.17 mph.
+
+            With only a red key in hand, horsepower levels are determined by the percentage of ethanol fuel detected. A recalibrated powertrain control module optimizes fueling and spark timing for both premium and high-ethanol-blended fuel to unlock the full horsepower potential.Production is limited to 3,300 at most based on production capacity, with 300 destined for Canada. Ordering opens Monday, March 27 at a U.S. MSRP3 of $96,666 and Canadian MSRP3.1 of $134,785. With options to choose from including 14 exterior colors, 2 Satin Black paint options, 4 interiors and optional carbon fiber wheels, there's guaranteed to be a configuration that fuels your fire.
+
+            Are you a current 2018 Challenger SRT Demon owner? When you place your order for the new 2023 SRT Demon 170 from a dealer with allocation, you'll have the unique opportunity to request to match your original SRT Demon VIN.</h2>
+        <video loop controls>
+            <source src="video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <section id="specs">
+        <h2>The Dodge Challenger is the name of three different generations of automobiles produced by the American automobile manufacturer Dodge. However, the first use of the Challenger name by Dodge dates back to 1959 for marketing a "value version" of the full-sized Coronet Silver Challenger.
+
+            From model years 1970 to 1974, the first-generation Dodge Challenger pony car was built using the Chrysler E platform in hardtop and convertible body styles sharing major components with the Plymouth Barracuda.[2]
+            
+            The second generation, from model years 1978 to 1983, was a badge engineered Mitsubishi Galant Lambda / Sapporo,[3] a coupe version of an economical compact car.</h2>
+        <h1>SPECIFICATION</h1>
+        <table class="specs-table">
+            <tr>
+                <th>Specification</th>
+                <th>Details</th>
+            </tr>
+            <tr>
+                <td>Engine</td>
+                <td>Supercharged 6.2L HEMI V8</td>
+            </tr>
+            <tr>
+                <td>Horsepower</td>
+                <td>840 hp</td>
+            </tr>
+            <tr>
+                <td>Torque</td>
+                <td>770 lb-ft</td>
+            </tr>
+            <tr>
+                <td>0-60 mph</td>
+                <td>2.3 seconds</td>
+            </tr>
+            <tr>
+                <td>1/4 Mile</td>
+                <td>9.65 seconds at 140 mph</td>
+            </tr>
+            <tr>
+                <td>Top Speed</td>
+                <td>211 mph</td>
+            </tr>
+            <tr>
+                <td>Transmission</td>
+                <td>8-speed automatic</td>
+            </tr>
+            <tr>
+                <td>Fuel Economy</td>
+                <td>13 mpg city / 22 mpg highway</td>
+            </tr>
+        </table>
+    </section>
+
+    <footer>
+        <p>© 2024 Dodge Charan. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const featureItems = document.querySelectorAll('#features li');
+            featureItems.forEach((item, index) => {
+                item.style.animationDelay = `${index * 0.3}s`;
+            });
+        });
+    </script>
+</body>
+</html>

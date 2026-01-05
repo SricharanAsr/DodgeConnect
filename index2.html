@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2023 Dodge Challenger SRT® | View Hellcat Redeye & More</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: black; /* Set the entire website background to black */
+            color: white; /* Set the default text color to white for better contrast */
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+        }
+        .image {
+            background-color: black; /* Maintain the black background for the image container */
+            padding: 10px; /* Added padding to avoid the image sticking to the edges */
+            margin-right: 20px; /* Margin to separate the image from the text and icon */
+        }
+        .image img {
+            display: block; /* To remove any extra space below the image */
+        }
+        .nav {
+            display: flex;
+            align-items: center;
+        }
+        .nav-item {
+            position: relative; /* Position relative to handle dropdown positioning */
+            display: flex;
+            align-items: center;
+            cursor: pointer; /* Cursor pointer to indicate it is clickable */
+            margin-right: 20px; /* Space between nav items */
+        }
+        .nav-item i {
+            margin-left: 5px; /* Space between the text and the chevron icon */
+        }
+        .dropdown-menu {
+            display: none; /* Hidden by default */
+            position: absolute;
+            top: 100%; /* Position below the parent element */
+            left: 0;
+            background-color: black; /* Match the website background */
+            border: 1px solid white; /* Border for visibility */
+            padding: 10px;
+            z-index: 1;
+        }
+        .dropdown-menu a {
+            color: white; /* White text for contrast */
+            text-decoration: none;
+            display: block;
+            padding: 5px 0;
+        }
+        .dropdown-menu a:hover {
+            background-color: #444; /* Dark grey background on hover */
+        }
+        .external-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+            margin-right: 20px; /* Space between external links */
+        }
+        .external-link i {
+            margin-left: 5px;
+            color: grey; /* Set icon color to grey */
+        }
+        .separator {
+            color: white;
+            padding: 0 10px;
+        }
+        .nav a i {
+            margin-right: 5px; /* Add space between icon and text */
+            color: grey; /* Set icon color to grey */
+        }
+        .srt-hub {
+            background-color: white;
+            padding: 10px;
+            margin: 20px;
+        }
+        .srt-hub span {
+            background-color: grey;
+            padding: 5px 10px;
+            color: white;
+            margin-right: 10px;
+        }
+        .srt-hub a {
+            color: black;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+        .srt-hub a:hover {
+            text-decoration: underline;
+        }
+        .video-container {
+            display: flex;
+            justify-content: center; /* Center the video horizontally */
+            align-items: center; /* Center the video vertically if needed */
+            width: 100%;
+            height: 443.67px; /* Set the specific height for the video */
+            background-color: black; /* Background color to match the website */
+            margin-bottom: 0; /* Remove bottom margin to eliminate gap */
+        }
+        .video-container video {
+            width: 1072px; /* Set the specific width for the video */
+            height: 100%; /* Ensure the video takes up the full height of the container */
+        }
+        .center-image-container {
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            width: 100%; /* Full width of the container */
+            height: 101.5px; /* Set the specific height for the container */
+            background-color: black; /* Match the background color */
+            margin-top: 0; /* Remove top margin to eliminate gap */
+        }
+        .center-image-container img {
+            width: 250px; /* Set the specific width for the image */
+            height: 41.5px; /* Ensure the image takes up the full height of the container */
+        }
+.center-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    width: 100%; /* Full width of the container */
+    height: auto; /* Adjust height based on content */
+    background-color: black; /* Match the background color */
+    margin-top: 0; /* Remove top margin to eliminate gap */
+    padding: 20px 0; /* Add some padding for spacing */
+}
+
+.center-text-container .title {
+    font-size: 48px; /* Set the specific height for the text */
+    width: auto; /* Allow text to adjust its width based on content */
+    text-align: center; /* Center text */
+    white-space: nowrap; /* Ensure text stays on a single line */
+    color: white; /* White text for contrast */
+    margin-bottom: 10px; /* Add some space between title and subtitle */
+}
+
+.center-text-container .subtitle {
+    font-size: 20px; /* Set the specific height for the text */
+    width: 981.75px; /* Set the specific width for the text */
+    text-align: center; /* Center text */
+    color: white; /* White text for contrast */
+}
+.new-image-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    width: 100%; /* Full width of the container */
+    height: 320.11px; /* Set the specific height for the container */
+    background-color: black; /* Match the background color */
+    margin-top: 20px; /* Add some margin from the top */
+}
+
+.image-container {
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    margin-top: 0.5cm; /* 0.5 cm gap at the top */
+}
+
+.image-container img {
+    margin: 0 0.25cm; /* 0.5 cm total gap between images */
+}
+   .wrapper {
+            display: flex;
+            justify-content: center; /* Optional: Center the spans horizontally in the page */
+            flex-wrap: wrap; /* Allows content to wrap to the next line if necessary */
+        }
+        .panel {
+            padding: 20px;
+            border: 1px solid #000;
+            margin: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column; /* Stack content vertically within each panel */
+        }
+        .heading-container {
+            width: 486.9px;
+            height: 84.99px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        h1 {
+            margin: 0;
+            font-size: 24px; /* Adjust as needed to fit within the dimensions */
+        }
+        .text-span {
+            width: 458.61px;
+            height: 59px;
+            display: inline-block;
+            vertical-align: top;
+            box-sizing: border-box; /* Ensures padding is included in the width and height */
+            padding: 5px; /* Adjust padding as needed */
+            border: 1px solid #000;
+            margin: 5px; /* Adjust margin as needed */
+        }
+        p {
+            margin: 0;
+            font-size: 14px; /* Adjust font size as needed */
+            text-align: center; /* Center text horizontally */
+        }
+        .audio-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+            flex-direction: column; /* Stack elements vertically */
+        }
+        .audio-control {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            margin: 10px;
+        }
+        .audio-control .icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ccc;
+            margin-right: 10px;
+        }
+        .audio-control .icon img {
+            width: 24px;
+            height: 24px;
+        }
+        .audio-control .text {
+            font-size: 18px;
+        }
+  .title-container {
+            width: 564.69px;
+            height: 48px;
+            background-color: black; /* Changed background color to black */
+            color: white; /* Text color changed to white for better contrast */
+            text-align: center;
+            line-height: 48px; /* Vertical centering */
+            font-size: 24px;
+            margin: 20px auto; /* Center horizontally */
+            border: 1px solid #000;
+        }
+       .description-container {
+            width: 682.83px;
+            height: 40px;
+            background-color: black;
+            text-align: center;
+            line-height: 40px; /* Vertical centering */
+            font-size: 18px;
+            margin: 20px auto; /* Center horizontally */
+            border: 1px solid #000;
+            padding: 10px; /* Add padding for better appearance */
+        }
+  img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+           .title-span {
+            display: block;
+            width: 525.48px;
+            height: 88px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            line-height: 88px; /* Vertical centering */
+            font-size: 24px;
+            margin: 20px auto; /* Center horizontally */
+            border: 1px solid #000;
+        }
+
+        /* Styling for the paragraph */
+        .description-paragraph {
+            width: 682.83px;
+            height: 40px;
+            background-color: black;
+            text-align: center;
+            line-height: 40px; /* Vertical centering */
+            font-size: 18px;
+            margin: 20px auto; /* Center horizontally */
+            border: 1px solid #000;
+            padding: 10px; /* Add padding for better appearance */
+        }
+      .image-container {
+            text-align: center;
+            margin-top: 20px; /* Adjust margin as needed */
+        }
+        
+        /* Style for the images */
+        .image-container img {
+            display: inline-block;
+            width: 412px;
+            height: 231px;
+            margin: 0.5cm; /* Adjust margin between images */
+        }
+.image-container div {
+    display: inline-block;
+    text-align: center;
+    margin: 0.5cm;
+}
+
+.image-container h3 {
+    margin-top: 10px;
+    color: white;
+}
+
+.image-container span {
+    display: block;
+    margin-top: 5px;
+    color: white; /* Adjust color if needed */
+    text-align: left; /* Align text to the left if required */
+}
+
+.image-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.image-container div span {
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    margin: 5px 0;
+}
+.four-images-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5cm;
+}
+
+.four-images-container img {
+    width: 304px;
+    height: 271px;
+    object-fit: cover; /* Ensures the image fits within the dimensions */
+}
+<style>
+    .four-images-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5cm;
+    }
+
+    .four-images-container img {
+        margin: 0.5cm;
+    }
+.four-images-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5cm;
+}
+
+.four-images-container div {
+    text-align: center;
+}
+
+.four-images-container img {
+    width: 304px;
+    height: 271px;
+    object-fit: cover; /* Ensures the image fits within the dimensions */
+}
+
+.four-images-container h3 {
+    color: white;
+    margin-top: 10px;
+}
+.two-images-container {
+    display: flex;
+}
+
+.two-images-container a {
+    flex: 1; /* Each link takes up equal space */
+    margin-right: 10px; /* Adjust spacing between images */
+}
+
+.two-images-container a:last-child {
+    margin-right: 0; /* Remove margin for the last image */
+}
+
+.two-images-container img {
+    width: 100%; /* Ensure images fill their respective containers */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.center-text {
+    color: white;
+    text-align: center; /* Center the text */
+}
+.white-text {
+    color: white; /* Set the text color to white */
+}
+<style>
+    .two-images-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .learn-more {
+        color: white;
+        margin-top: 10px; 
+        text-align: center/* Adjust as needed */
+    }
+    .chevron-icon {
+        color: red;
+    }
+   .custom-container {
+        width: 624.03px;
+        height: 99.5px;
+        background-color: charcoal;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+    }
+    .custom-link {
+        color: white;
+        text-decoration: none;
+    }
+    .custom-icon {
+        margin-right: 10px;
+    }
+    .custom-search-bar {
+        border: 1px solid red;
+        border-radius: 5px;
+        padding: 5px;
+        width: 200px;
+        background-color: transparent;
+        color: white;
+    }
+    .custom-search-button {
+        background-color: red;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .custom-link {
+            display: block;
+            margin-bottom: 1cm; /* Adjust this value as needed */
+        }
+.content {
+    width: 1319px;
+    height: 114px;
+    background-color: #ccc; /* Grey background */
+}
+
+.custom-image {
+    width: 90px;
+    height: 30.8px;
+    position: relative; /* Positioning context for absolute positioning */
+    z-index: 1; /* Ensure the image stays on top */
+}
+
+.external-link-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 16px;
+    height: 16px;
+    background-image: url('external-link-icon.png'); /* Replace 'external-link-icon.png' with your icon image */
+    background-size: cover;
+    z-index: 2; /* Ensure the icon stays on top */
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image">
+            <a href="https://www.dodge.com/" target="_blank">
+                <img src="logo-dodge.webp" alt="Description of Image" width="232" height="31">
+            </a>
+        </div>
+        <div class="nav">
+            <div class="nav-item" onclick="toggleDropdown('dropdown-vehicles')">
+                <span>VEHICLES</span>
+                <i class="fas fa-chevron-down"></i>
+                <div class="dropdown-menu" id="dropdown-vehicles">
+                    <a href="#car1">Car 1</a>
+                    <a href="#car2">Car 2</a>
+                    <a href="#car3">Car 3</a>
+                </div>
+            </div>
+            <div class="nav-item" onclick="toggleDropdown('dropdown-shopping')">
+                <span>SHOPPING TOOLS</span>
+                <i class="fas fa-chevron-down"></i>
+                <div class="dropdown-menu" id="dropdown-shopping">
+                    <a href="#tool1">Tool 1</a>
+                    <a href="#tool2">Tool 2</a>
+                    <a href="#tool3">Tool 3</a>
+                </div>
+            </div>
+            <div class="nav-item" onclick="toggleDropdown('dropdown-muscle')">
+                <span>DODGE MUSCLE</span>
+                <i class="fas fa-chevron-down"></i>
+                <div class="dropdown-menu" id="dropdown-muscle">
+                    <a href="#muscle1">Muscle 1</a>
+                    <a href="#muscle2">Muscle 2</a>
+                    <a href="#muscle3">Muscle 3</a>
+                </div>
+            </div>
+            <!-- External Link for DODGE GARAGE -->
+            <a href="https://www.dodgegarage.com/" class="external-link" target="_blank">
+                <span>DODGE GARAGE</span>
+                <i class="fas fa-external-link-alt"></i>
+            </a>
+            <div class="nav-item" onclick="toggleDropdown('dropdown-power')">
+                <span>DODGE POWER BROKERS</span>
+                <i class="fas fa-chevron-down"></i>
+                <div class="dropdown-menu" id="dropdown-power">
+                    <a href="#power1">Power 1</a>
+                    <a href="#power2">Power 2</a>
+                    <a href="#power3">Power 3</a>
+                </div>
+            </div>
+            <span class="separator">|</span>
+            <!-- External Link for FIND A DEALER -->
+            <a href="https://www.dodge.com/find-dealer.html" class="external-link" target="_blank">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>FIND A<br>DEALER</span>
+            </a>
+            <!-- External Link for SHOP ONLINE -->
+            <a href="https://e-shop.dodge.com/t1/2023/challenger?ott=start-buying-process&refrel=dodge&vehicle_type=new&zipcode=52200&journey_id=228c1215-27d9-7827-f63c-70264dfd9f06-2024-0518-0341-09" class="external-link" target="_blank">
+                <i class="fas fa-shopping-cart"></i>
+                <span>SHOP<br>ONLINE</span>
+                <i class="fas fa-external-link-alt"></i>
+            </a>
+            <!-- External Link for BUILD & PRICE -->
+            <a href="https://www.dodge.com/bmo.challenger.html?app=bmo&brand=dodge&pageName=srt&pageTemplate=include-page&pageType=vehiclepage&pageVersion=1&textResizeFactor=1&vehicle=challenger&vehiclePage=challenger&year=2023#/models/2023/challenger" class="external-link" target="_blank">
+                <i class="fas fa-wrench"></i>
+                <span>BUILD &<br>PRICE</span>
+            </a>
+        </div>
+    </div>
+    <div class="srt-hub">
+        <span>SRT® HUB</span>
+        <a href="https://www.dodge.com/challenger/srt.html" target="_blank">Challenger SRT®</a>
+        <a href="https://www.dodge.com/charger/srt.html" target="_blank">Charger SRT®</a>
+        <a href="https://www.dodge.com/durango/srt.html" target="_blank">Durango SRT®</a>
+    </div>
+  
+    <div class="video-container">
+        <video id="saved-video" controls autoplay>
+            <source src="video2.mov" type="video/mp4">
+               Your browser does not support the video tag.
+        </video>
+    </div>
+  <div class="center-image-container">
+        <img src="SRT_logo.png.image.500.avif" alt="SRT Logo">
+    </div>
+    <div class="center-text-container">
+    <div class="title">CHALLENGER SRT® HELLCAT</div>
+    <div class="subtitle">As intimidating as it is iconic, with a Supercharged 6.2L HEMI® V8 engine to back up the hype.</div>
+</div>
+<div class="new-image-container">
+    <img src="MY23_SRThub_Challenger_Hellcat_Desktop_01.avif" alt="Description of Image" width="1072" height="320.11">
+</div>
+<div class="image-container">
+    <img src="MY23_SRThub_Challenger_Hellcat_Desktop_02.jpg.image.2880.avif" alt="Description of Image" width="505.21" height="285.93">
+    <img src="MY23_SRThub_Challenger_Hellcat_Desktop_03.jpg.image.2880.avif" alt="Description of Image" width="505.21" height="285.93">
+</div>
+<div class="wrapper">
+    <div class="panel">
+        <div class="heading-container">
+            <h1>HEAR IT ROAR</h1>
+        </div>
+    </div>
+    <div class="panel">
+        <div class="heading-container">
+            <h1>ALWAYS BET ON POWER</h1>
+        </div>
+    </div>
+</div>
+<div class="wrapper">
+    <span class="text-span">
+        <p>The devil’s in the details. A classic Hellcat badge on both the exterior and interior of the car honors this speed machine’s timeless legacy, and leaves onlookers eternally obsessed.</p>
+    </span>
+    <span class="text-span">
+        <p>For controlled outbursts, the black key fob unleashes 500 horsepower of pure acceleration. But when you’ve got to have it all, the red fob summons up all 717 horses from under the hood. No wrong answer here.</p>
+    </span>
+</div>
+<div class="audio-container">
+    <div class="audio-control" id="audioControl">
+        <div class="icon" id="audioIcon">
+            <img src="https://img.icons8.com/material-outlined/24/000000/speaker.png" alt="Play Icon">
+        </div>
+        <div class="text" id="audioText">LISTEN TO THE ENGINE</div>
+    </div>
+    <audio id="engineAudio" src="path/to/your/audio/file.mp3"></audio>
+</div>
+
+<script>
+    const audioControl = document.getElementById('audioControl');
+    const audioIcon = document.getElementById('audioIcon').querySelector('img');
+    const audioText = document.getElementById('audioText');
+    const engineAudio = document.getElementById('engineAudio');
+
+    audioControl.addEventListener('click', () => {
+        if (engineAudio.paused) {
+            engineAudio.play();
+            audioIcon.src = 'https://img.icons8.com/material-outlined/24/000000/mute.png';
+            audioText.textContent = 'STOP ENGINE';
+        } else {
+            engineAudio.pause();
+            audioIcon.src = 'https://img.icons8.com/material-outlined/24/000000/speaker.png';
+            audioText.textContent = 'LISTEN TO THE ENGINE';
+        }
+    });
+
+    // Change icon and text when audio ends
+    engineAudio.addEventListener('ended', () => {
+        audioIcon.src = 'https://img.icons8.com/material-outlined/24/000000/speaker.png';
+        audioText.textContent = 'LISTEN TO THE ENGINE';
+    });
+</script>
+<div class="title-container">
+    CHALLENGER SRT® HELLCAT WIDEBODY
+</div>
+<div class="description-container">
+    <p> Wider is always better. With its extra width and Supercharged 6.2L HEMI® SRT Hellcat V8 engine, this monster’s handling ability makes every drive an unparalleled rush.</p>
+</div>
+<img src="MY23_SRThub_Challenger_Hellcat_Widebody_Desktop_01.avif" alt="Image" width="773" height="230.82">
+<div class="image-container">
+    <img src="MY23_SRThub_Challenger_Hellcat_Widebody_Desktop_02.jpg.image.2880.avif" alt="Image 1" width="328" height="328">
+    <img src="MY23_SRThub_Challenger_Hellcat_Widebody_Desktop_03.jpg.image.2880.avif" alt="Image 2" width="328" height="328">
+</div>
+    <div class="wrapper">
+    <div class="panel">
+        <div class="heading-container">
+            <P>GO WIDE OR GO HOME</P>
+        </div>
+    </div>
+    <div class="panel">
+        <div class="heading-container">
+            <P>CATCH SOME AIR</P>
+        </div>
+    </div>
+</div>
+    <div class="wrapper">
+    <span class="text-span">
+        <p>The fenders of the Challenger SRT® Hellcat Widebody bring 3.5 extra inches to the game, and house wider tires—meaning superior handling, better grip and a stance that scares off Sunday drivers.</p>
+    </span>
+    <span class="text-span">
+<P>Blazing light and inventive function meet as Air-Catcher® Headlamps illuminate the road while allowing air to flow into the engine.</P>
+        </span>
+</div>
+<span class="title-span">CHALLENGER SRT® HELLCAT REDEYE</span>
+
+<p class="description-paragraph">With its Supercharged 6.2L HEMI® SRT Hellcat V8 engine offering up to 797 horsepower, it was born to leave bystanders wondering what just happened.</p>
+<img src="MY23_SRThub_Challenger_Hellcat_Redeye_Desktop_01.avif" alt="Image" width="773" height="230.82">
+<div class="title-container">
+    CHALLENGER SRT® HELLCAT WIDEBODY
+</div>
+<div class="description-container">
+    <p>Even as it reaches 60 mph in 3.6 seconds, its Class-Exclusive widebody fender flares( Disclosure1) stay burned into envious eyes.</p>
+</div>
+<img src="MY23_SRThub_Challenger_Hellcat_Redeye_Widebody_Desktop_01.avif" alt="Image" width="773" height="230.82">
+<div class="image-container">
+    <div>
+        <img src="MY23_SRThub_Challenger_Hellcat_Redeye_Widebody_Desktop_02.jpg.image.2880.avif" alt="Image 1">
+        <h3>BEST SERVED COLD</h3>
+                <span>Using the car’s air conditioning system to cool the intake charge, the SRT Power Chiller® drives more oxygen to the engine—increasing its combustion, and its raw power.</span>
+
+    </div>
+    <div>
+        <img src="MY23_SRThub_Challenger_Hellcat_Redeye_Widebody_Desktop_03.jpg.image.2880.avif" alt="Image 2">
+        <h3>BROAD SHOULDERS</h3>
+                <span>Not only do the added 3.5 inches on each fender dominate the horizon, but they also jack up your vehicle’s grip, handling and stability.</span>
+
+    </div>
+    <div>
+        <img src="MY23_SRThub_Challenger_Hellcat_Redeye_Widebody_Desktop_04.jpg.image.2880.avif" alt="Image 3">
+        <h3>SUPERCHARGED TO PERFECTION</h3>
+                <span>The Redeye and Super Stock models feature the largest factory supercharger of any mass-produced car(Disclosure1), clocking in at 6,500 rpm.</span>
+
+    </div>
+</div>
+<div class="title-container">
+    CHALLENGER SRT® SUPER STOCK
+
+</div>
+<div class="description-container">
+    <p>It’s hard to argue with 807 horses—and since it has the highest horsepower of any mass-produced car( Disclosure2), no one’s going to.</p>
+</div>
+    <div>
+<img src="MY23_SRThub_Challenger_SuperStock_Desktop_01.avif" alt="Image" width="773" height="230.82">
+    </div>
+<div class="four-images-container">
+    <div>
+        <img src="MY23_SRThub_Challenger_SuperStock_Desktop_02.jpg.image.2880.avif" alt="Image 1">
+        <h3>PROFESSIONALLY FAST</h3>
+<p>The Dodge Challenger SRT® Super Stock is able to go from 0 to 60 mph in 3.25 seconds.</p>
+    </div>
+    <div>
+        <img src="MY23_SRThub_Challenger_SuperStock_Desktop_03.jpg.image.2880.avif" alt="Image 2">
+        <h3>UNMATCHED POWER</h3>
+<p>With 807 horses blasting out of its Supercharged 6.2L High-Output HEMI® V8, drivers can remain confident knowing they’re behind the most powerful mass-produced V8 engine out there
+</p>
+    </div>
+    <div>
+        <img src="MY23_SRThub_Challenger_SuperStock_Desktop_04.jpg.image.2880.avif" alt="Image 3">
+        <h3>AIR WORKING OVERTIME</h3>
+        <p>Breathe deep knowing you’re always receiving performance-level power. The Super Stock comes equipped with a dual snorkel hood, feeding air directly into its high-power supercharger.
+</p>
+    </div>
+    <div>
+        <img src="MY23_SRThub_Challenger_SuperStock_Desktop_05.jpg.image.2880.avif" alt="Image 4">
+        <h3>HIGH-PROOF STOPPING POWER</h3>
+<p>The lightweight 18x11-inch low-gloss granite wheels and their Nitro NTO5R drag radial tires transfer power to the ground. When the brakes are applied, the aluminum Brembo four-piston brake calipers and 14.2-inch vented rotors help slow things down.</p>
+    </div>
+</div>
+<div class="title-container">
+BUILT TO DOMINATE
+
+</div>
+<div class="description-container">
+    <p>The Dodge SRT® vehicle roster was designed for superior speed, style and performance capability.</p>
+</div>
+
+<div class="two-images-container">
+    <a href="https://www.dodge.com/charger/srt.html" target="_blank">
+        <img src="MY23_SRThub_Thumb_Charger.avif" alt="Image 1">
+        <h3 class="center-text">CHALLENGER SRT®</h3>
+        <p class="white-text">The modern face of a muscle icon </p>
+        <p class="center-text">Learn More <i class="fas fa-chevron-right chevron-icon"></i></p>
+    </a>
+    <a href="https://www.dodge.com/durango/srt.html" target="_blank">
+        <img src="MY23_SRThub_Thumb_Durango.avif" alt="Image 2">
+        <h3 class="center-text">CHARGER SRT®</h3>
+        <p class="white-text">Muscle comes with four doors </p>
+        <p class="center-text">Learn More <i class="fas fa-chevron-right chevron-icon"></i></p>
+    </a>
+</div>
+
+    </body>
