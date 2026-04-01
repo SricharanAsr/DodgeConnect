@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Test Drive</title>
+    <link rel="icon" type="image/x-icon" href="dodge.svg">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Book a Test Drive with Dodge</h1>
+    </header>
+    <main>
+        <section class="form-section">
+            <h2>Schedule Your Test Drive</h2>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="car-model">Select Car Model</label>
+                    <select id="car-model" name="car-model" required >
+                        <option value="challenger">Dodge Challenger DEMON</option>
+                        <option value="challenger">Dodge Challenger HELLCAT</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="date">Preferred Date</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="time">Preferred Time</label>
+                    <input type="time" id="time" name="time" required>
+                </div>
+                <button type="submit"  onclick="location.href='blog.html'">Book Test Drive</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Dodge. All rights reserved.</p>
+    </footer>
+</body>
+</html>
